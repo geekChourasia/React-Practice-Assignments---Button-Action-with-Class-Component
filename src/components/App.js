@@ -4,7 +4,6 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
-
 		this.state = { isClicked: false };
 
 		// this.state = this.printPara.bind(this);
@@ -19,7 +18,7 @@ class App extends Component {
 		return (
 			<div id="main">
 				<button id="click" onClick={this.printPara}>Click Me</button>
-				{this.state.isClicked ? <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : null}
+				{this.state.isClicked ? <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : null}
 			</div>
 
 		);
