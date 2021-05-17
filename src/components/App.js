@@ -1,31 +1,39 @@
-import React, {Component, useState} from "react";
+import React, { Component, useState } from "react";
 import '../styles/App.css';
-
 class App extends Component {
-    constructor(props) {
+
+	constructor(props) {
 		super(props);
 
-		this.state={isClicked:false}
+		this.state = { isClicked: false };
 
-		handleClick=()=>{
-
-			this.setState({isClicked:true})
-
-		}
-
-		
+		// this.state = this.printPara.bind(this);
 	};
 
-    render() {
-    	return(
-    		<div id="main">
-				{ isClicked?  <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>: null }
-				<button id="click" onClick={this.handleClick}>Click Me</button>
-    		</div>
-    	);
-    }
+	printPara = () => {
+		//- declare directly don't use const or let
+
+		this.setState({ isClicked: true })
+	}
+	render() {
+		return (
+			<div id="main">
+				<button id="click" onClick={this.printPara}>Click Me</button>
+				{this.state.isClicked ? <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : null}
+			</div>
+
+		);
+	}
+
 }
 
 
 export default App;
+
+
+
+
+
+
+
 
