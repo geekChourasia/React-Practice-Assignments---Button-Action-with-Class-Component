@@ -8,7 +8,7 @@ class App extends Component {
 		this.state = { isClicked: false };
 
 		// this.state = this.printPara.bind(this);
-	};
+	}
 
 	printPara = () => {
 		//- declare directly don't use const or let
