@@ -34,7 +34,7 @@ class App extends Component {
 
 				{this.state.isClicked ? (
 
-					<para>
+					<para id="para">
 
 						Hello, I've learnt to use the full-stack evaluation tool. This makes
 
