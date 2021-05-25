@@ -4,7 +4,7 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { isClicked: false };
+		this.state = ({ isClicked: false });
 
 		// this.state = this.printPara.bind(this);
 	}
@@ -13,12 +13,13 @@ class App extends Component {
 		//- declare directly don't use const or let
 
 		this.setState({ isClicked: true })
-	}
+	};
+
 	render() {
 		return (
 			<div id="main">
 				<button id="click" onClick={this.printPara}>Click Me</button>
-				{this.state.isClicked ? <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : null}
+				{this.state.isClicked ?<para id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</para>: null}
 			</div>
 
 		);
